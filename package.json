@@ -1,0 +1,30 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "My portfolio project",
+  "main": "index.html",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-social": "^5.1.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^1.9.1",
+    "popper.js": "^1.16.0"
+  },
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  },
+  "scripts": {
+    "test": "test",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajj-siraj/MyPortfolio.git"
+  },
+  "author": "Siraj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajj-siraj/MyPortfolio/issues"
+  },
+  "homepage": "https://github.com/ajj-siraj/MyPortfolio#readme"
+}
