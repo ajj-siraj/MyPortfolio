@@ -1,0 +1,28 @@
+.btn:focus,
+.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.fa-arrow-down-animated {
+    animation-name: collapse-icon-animation;
+    animation-duration: 2s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+.fa-arrow-up-animated {
+    animation-name: collapse-icon-animation;
+    animation-duration: 2s;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes collapse-icon-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
