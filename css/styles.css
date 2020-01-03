@@ -6,16 +6,18 @@
 
 .fa-arrow-down-animated {
     animation-name: collapse-icon-animation;
-    animation-duration: 2s;
+    animation-duration: 0.15s;
     animation-direction: normal;
     animation-timing-function: linear;
+    animation-fill-mode:forwards;
 }
 
 .fa-arrow-up-animated {
-    animation-name: collapse-icon-animation;
-    animation-duration: 2s;
-    animation-direction: reverse;
+    animation-name: collapse-icon-animation-reverse;
+    animation-duration: 0.25s;
+    animation-direction: normal;
     animation-timing-function: linear;
+    animation-fill-mode:forwards;
 }
 
 @keyframes collapse-icon-animation {
@@ -23,6 +25,15 @@
         transform: rotate(0deg);
     }
     100% {
-        transform: rotate(90deg);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes collapse-icon-animation-reverse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
