@@ -1,17 +1,18 @@
 $(document).ready(function () {
 
     $('#toggler-btn').on('click', function(){
-        var state = $('#toggler-btn').attr('aria-expanded');
-        if(state){
-            console.log("the if statement passed. Expanded is: ", state);
-            $('#clpse-icon').removeClass("fa-arrow-up-animated").addClass("fa-arrow-down-animated");
-            // $('#clpse-icon').addClass("fa-arrow-down-animated");
-        }
+        $('#clpse-icon').toggleClass("fa-arrow-up-animated");
+        // var state = $('#toggler-btn').attr('aria-expanded');
+        // if(state){
+        //     console.log("the if statement passed. Expanded is: ", state);
+        //     $('#clpse-icon').removeClass("fa-arrow-up-animated").addClass("fa-arrow-down-animated");
+        //     // $('#clpse-icon').addClass("fa-arrow-down-animated");
+        // }
 
-        else{
-            $('#clpse-icon').removeClass("fa-arrow-down-animated").addClass("fa-arrow-up-animated");
-            // $('#clpse-icon').addClass("fa-arrow-up-animated");
-        }
+        // else{
+        //     $('#clpse-icon').removeClass("fa-arrow-down-animated").addClass("fa-arrow-up-animated");
+        //     // $('#clpse-icon').addClass("fa-arrow-up-animated");
+        // }
     });
 
     //This idea could work, I'll keep it for reference:
