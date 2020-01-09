@@ -1,9 +1,13 @@
 html{
     scroll-behavior:smooth;
+    background-image:url('../img/matrix-background.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100%;
 }
 
 body{
-    background-color:#272822;
+    background-color:#272822b0;
     font-family: "Helvetica";
     color: #fff;
     text-align:center;
@@ -17,19 +21,27 @@ body{
 
 
 .welcome-section{
-    padding:20%;
+    /* padding:20%; */
+    height:100vh;
 }
 
 .welcome-message{
+    margin-top:20%;
     font-size:2em;
 }
 
 .about-section{
-    padding:30%;
-    background-color:#e5e5e5;
+    height:100vh;
+    background-color:#e5e5e56e;
     color:#7f7f7f;
 }
 
+.about-message{
+    margin-top:20%;
+}
+.projects-section{
+    height:100vh;
+}
 .projects-message{
     padding:5%;
 }
