@@ -1,3 +1,4 @@
+/* HTML general */
 html{
     scroll-behavior:smooth;
     background-image:url('../img/matrix-background.jpg');
@@ -13,13 +14,64 @@ body{
     text-align:center;
 }
 
+footer{
+    padding:10%;
+    background-color:#e5e5e5;
+    color:#7f7f7f;
+}
+
+/* Bootstrap related styles */
 .btn:focus,
 .btn:active {
     outline: none !important;
     box-shadow: none !important;
 }
 
+.card{
+    color:#7f7f7f;
+    background-color:#491742;
+    margin:5%;
+}
 
+.carousel img{
+    max-height:250px;
+    max-width:250px;
+    height:auto;
+    width:auto;
+}
+
+/* Custom carousel specific styles */
+.multi-item-carousel .carousel-inner > .item {
+    transition: 500ms ease-in-out left;
+  }
+  .multi-item-carousel .carousel-inner .active.left {
+    left: -33%;
+  }
+  .multi-item-carousel .carousel-inner .active.right {
+    left: 33%;
+  }
+  .multi-item-carousel .carousel-inner .next {
+    left: 33%;
+  }
+  .multi-item-carousel .carousel-inner .prev {
+    left: -33%;
+  }
+  @media all and (transform-3d), (-webkit-transform-3d) {
+    .multi-item-carousel .carousel-inner > .item {
+      transition: 500ms ease-in-out left;
+      transition: 500ms ease-in-out all;
+      -webkit-backface-visibility: visible;
+              backface-visibility: visible;
+      -webkit-transform: none!important;
+              transform: none!important;
+    }
+  }
+  .multi-item-carousel .carouse-control.left,
+  .multi-item-carousel .carouse-control.right {
+    background-image: none;
+  }
+  
+/* Personal custom styles */
 .welcome-section{
     /* padding:20%; */
     height:100vh;
@@ -46,11 +98,7 @@ body{
     padding:5%;
 }
 
-footer{
-    padding:10%;
-    background-color:#e5e5e5;
-    color:#7f7f7f;
-}
+/* Animations */
 .view-more-btn:hover .view-more-icon{
     animation-name: icon-bounce;
     animation-duration: 0.3s;
@@ -76,12 +124,9 @@ footer{
     animation-fill-mode:forwards;
 }
 
-.card{
-    color:#7f7f7f;
-    background-color:#491742;
-    margin:5%;
-}
 
+
+/* Misc */
 @keyframes collapse-icon-animation {
     0% {
         transform: rotate(0deg);

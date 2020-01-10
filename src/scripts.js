@@ -1,41 +1,28 @@
 $(document).ready(function () {
-    
+
     //Mobile menu collapse button animation toggle
-    $('#toggler-btn').on('click', function(){
+    $('#toggler-btn').on('click', function () {
         $('#clpse-icon').toggleClass("fa-arrow-up-animated");
     });
 
-    //This idea could work, I'll keep it for reference:
-    // $('#toggler-btn').on('shown.bs.collapse',function(){
-    //     $('#clpse-icon').removeClass("fa-arrow-down").addClass("fa-arrow-up");
-    // });
-    // $('#toggler-btn').on('hidden.bs.collapse',function(){
-    //     $('#clpse-icon').removeClass("fa-arrow-up").addClass("fa-arrow-down");
-    // });
+    // Bootstrap carousel: Projects
+    $('.multi-item-carousel').carousel({
+        interval: false
+    });
 
+    // for every slide in carousel, copy the next slide's item in the slide.
+    // Do the same for the next, next item.
+    $('.multi-item-carousel .item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
 
-    // console.log($('#toggler-btn').attr('aria-expanded'));
-    // if($('#toggler-btn').attr('aria-expanded')){
-    //     console.log("the if statement passed");
-    //     $('#toggler-btn').on('click', function(){
-    //         $('#clpse-icon').addClass("fa-arrow-down-animated");
-    //     });
-    // }
-
-    // else{
-    //     console.log("the if statement FAILED");
-    //     $('#toggler-btn').on('click', function(){
-    //         $('#clpse-icon').addClass("fa-arrow-up-animated");
-    //     });
-    // }
-
-    
-    // $('#toggler-btn').on('click', function () {
-    //     $(this).parent().find(".fa").removeClass("fa-arrow-down").addClass("fa-arrow-down-animated");
-    // });
-
-    // $('#toggler-btn').on('click', function () {
-    //     $(this).parent().find(".fa").removeClass("fa-arrow-down-animated").addClass("fa-arrow-up");
-
-    // });
+        if (next.next().length > 0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+        } else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+        }
+    });
 });
