@@ -1,23 +1,31 @@
 /* HTML general */
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
     /* background-image:url('../img/matrix-background.jpg'); */
-    background-repeat:no-repeat;
-    background-attachment:fixed;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size:2rem;
 }
 
-body{
-    background-color:#272822b0;
+body {
+    /* background-color:#272822b0; */
     font-family: "Helvetica";
     color: #fff;
-    text-align:center;
+    text-align: center;
+
+    background: linear-gradient(338deg, #ce2828, #28c5ce, #00b62f);
+    background-size: 600% 600%;
+
+    -webkit-animation: gradient-background-animation 10s ease infinite;
+    -moz-animation: gradient-background-animation 10s ease infinite;
+    animation: gradient-background-animation 10s ease infinite;
 }
 
-footer{
-    padding:10%;
-    background-color:#e5e5e5;
-    color:#7f7f7f;
+footer {
+    /* padding: 10%; */
+    background-color: #e5e5e5;
+    color: #7f7f7f;
 }
 
 /* Bootstrap related styles */
@@ -27,79 +35,37 @@ footer{
     box-shadow: none !important;
 }
 
-.card{
-    color:#7f7f7f;
-    background-color:#491742;
-    margin:5%;
-}
-
-.carousel img{
-    max-height:250px;
-    max-width:250px;
-    height:auto;
-    width:auto;
-}
-
-/* Custom carousel specific styles */
-.multi-item-carousel .carousel-inner > .item {
-    transition: 500ms ease-in-out left;
-  }
-  .multi-item-carousel .carousel-inner .active.left {
-    left: -33%;
-  }
-  .multi-item-carousel .carousel-inner .active.right {
-    left: 33%;
-  }
-  .multi-item-carousel .carousel-inner .next {
-    left: 33%;
-  }
-  .multi-item-carousel .carousel-inner .prev {
-    left: -33%;
-  }
-  @media all and (transform-3d), (-webkit-transform-3d) {
-    .multi-item-carousel .carousel-inner > .item {
-      transition: 500ms ease-in-out left;
-      transition: 500ms ease-in-out all;
-      -webkit-backface-visibility: visible;
-              backface-visibility: visible;
-      -webkit-transform: none!important;
-              transform: none!important;
-    }
-  }
-  .multi-item-carousel .carouse-control.left,
-  .multi-item-carousel .carouse-control.right {
-    background-image: none;
-  }
-  
 /* Personal custom styles */
-.welcome-section{
+.welcome-section {
     /* padding:20%; */
-    height:100vh;
+    height: 50vh;
 }
 
-.welcome-message{
-    margin-top:20%;
-    font-size:2em;
+.welcome-message {
+    /* padding: 20%; */
+    font-size: 2em;
 }
 
-.about-section{
-    height:100vh;
-    background-color:#e5e5e56e;
-    color:#7f7f7f;
+.about-section {
+    height: 50vh;
+    background-color: #e5e5e56e;
+    color: #7f7f7f;
 }
 
-.about-message{
-    margin-top:20%;
+.about-message {
+    /* margin-top: 20%; */
 }
-.projects-section{
-    height:100vh;
+
+.projects-section {
+    height: 50vh;
 }
-.projects-message{
-    padding:5%;
+
+.projects-message {
+    /* padding: 5%; */
 }
 
 /* Animations */
-.view-more-btn:hover .view-more-icon{
+.view-more-btn:hover .view-more-icon {
     animation-name: icon-bounce;
     animation-duration: 0.3s;
     animation-direction: normal;
@@ -113,7 +79,7 @@ footer{
     animation-duration: 0.15s;
     animation-direction: normal;
     animation-timing-function: ease;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
 
 .fa-arrow-up-animated {
@@ -121,16 +87,17 @@ footer{
     animation-duration: 0.25s;
     animation-direction: normal;
     animation-timing-function: ease;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
 
 
 
-/* Misc */
-@keyframes collapse-icon-animation {
+/* Misc/Keyframes/MediaQueries */
+/* @keyframes collapse-icon-animation {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(180deg);
     }
@@ -140,19 +107,90 @@ footer{
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(-360deg);
     }
+} */
+
+@keyframes icon-bounce {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 3px);
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
 }
 
-@keyframes icon-bounce{
+@-webkit-keyframes gradient-background-animation {
     0% {
-        transform: translate(0px,0px);
+        background-position: 0% 14%
     }
-    50%{
-        transform: translate(0px,3px);
+
+    50% {
+        background-position: 100% 87%
     }
+
     100% {
-        transform: translate(0px,0px);
+        background-position: 0% 14%
     }
+}
+
+@-moz-keyframes gradient-background-animation {
+    0% {
+        background-position: 0% 14%
+    }
+
+    50% {
+        background-position: 100% 87%
+    }
+
+    100% {
+        background-position: 0% 14%
+    }
+}
+
+@keyframes gradient-background-animation {
+    0% {
+        background-position: 0% 14%
+    }
+
+    50% {
+        background-position: 100% 87%
+    }
+
+    100% {
+        background-position: 0% 14%
+    }
+
+}
+
+    /* media queries */
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .welcome-section{
+        height:100vh;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
