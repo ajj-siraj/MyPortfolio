@@ -35,6 +35,13 @@ footer {
     box-shadow: none !important;
 }
 
+.btn{
+    border-radius:50px;
+}
+
+.card img{
+    width:100%;
+}
 /* Personal custom styles */
 .welcome-section {
     /* padding:20%; */
@@ -44,11 +51,13 @@ footer {
 .welcome-message {
     /* padding: 20%; */
     font-size: 2em;
+    background-color: #79797991;
+    padding:5%;
 }
 
 .about-section {
     height: 50vh;
-    background-color: #e5e5e56e;
+    background-color: #e5e5e5;
     color: #7f7f7f;
 }
 
@@ -73,6 +82,16 @@ footer {
     /* animation-delay: 0.05s; */
     animation-iteration-count: infinite;
 }
+
+.view-more-btn:hover{
+    animation-name: button-pop;
+    animation-duration: 0.25s;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-fill-mode:forwards;
+}
+
+
 
 .fa-arrow-down-animated {
     animation-name: collapse-icon-animation;
@@ -170,6 +189,16 @@ footer {
 
 }
 
+@keyframes button-pop {
+    0%{
+        transform: scale(1);
+    }
+    
+    100%{
+        transform: scale(1.1);
+    }
+}
+
     /* media queries */
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap */
@@ -181,6 +210,12 @@ No media query since this is the default in Bootstrap */
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
     .welcome-section{
+        height:100vh;
+    }
+    .about-section{
+        height:100vh;
+    }
+    .projects-section{
         height:100vh;
     }
 }
