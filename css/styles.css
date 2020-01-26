@@ -10,16 +10,17 @@ html {
 
 body {
     /* background-color:#272822b0; */
-    font-family: "Helvetica";
+    font-family: 'Bangers';
+
     color: #fff;
     text-align: center;
 
     background: linear-gradient(47deg, #10425a, #6c91a3, #38abe3);
-    background-size: 600% 600%;
+    background-size: 100% 100%;
 
-    -webkit-animation: gradient-background-animation 3s ease infinite;
+    /* -webkit-animation: gradient-background-animation 3s ease infinite;
     -moz-animation: gradient-background-animation 3s ease infinite;
-    animation: gradient-background-animation 3s ease infinite;
+    animation: gradient-background-animation 3s ease infinite; */
 
 }
 
@@ -38,6 +39,7 @@ footer {
 
 .btn {
     border-radius: 50px;
+    font-family: 'Marcellus SC';
 }
 
 .card img {
@@ -94,6 +96,7 @@ footer {
     animation-direction: normal;
     animation-timing-function: linear;
     animation-fill-mode: forwards;
+    /* background-color: #a086ff; */
 }
 
 
@@ -152,7 +155,7 @@ footer {
 }
 
 
-@-webkit-keyframes gradient-background-animation {
+/* @-webkit-keyframes gradient-background-animation {
     0% {
         background-position: 0% 50%
     }
@@ -192,7 +195,7 @@ footer {
     100% {
         background-position: 0% 50%
     }
-}
+} */
 
 @keyframes button-pop {
     0% {
