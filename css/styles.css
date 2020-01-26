@@ -5,7 +5,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-size:2rem;
+    font-size: 2.5rem;
 }
 
 body {
@@ -14,12 +14,13 @@ body {
     color: #fff;
     text-align: center;
 
-    background: linear-gradient(338deg, #ce2828, #28c5ce, #00b62f);
+    background: linear-gradient(47deg, #10425a, #6c91a3, #38abe3);
     background-size: 600% 600%;
 
-    -webkit-animation: gradient-background-animation 10s ease infinite;
-    -moz-animation: gradient-background-animation 10s ease infinite;
-    animation: gradient-background-animation 10s ease infinite;
+    -webkit-animation: gradient-background-animation 3s ease infinite;
+    -moz-animation: gradient-background-animation 3s ease infinite;
+    animation: gradient-background-animation 3s ease infinite;
+
 }
 
 footer {
@@ -35,12 +36,16 @@ footer {
     box-shadow: none !important;
 }
 
-.btn{
-    border-radius:50px;
+.btn {
+    border-radius: 50px;
 }
 
-.card img{
-    width:100%;
+.card img {
+    width: 100%;
+}
+
+.card {
+    margin:2%;
 }
 /* Personal custom styles */
 .welcome-section {
@@ -51,8 +56,8 @@ footer {
 .welcome-message {
     /* padding: 20%; */
     font-size: 2em;
-    background-color: #79797991;
-    padding:5%;
+    /* background-color: #79797991; */
+    padding: 5%;
 }
 
 .about-section {
@@ -66,7 +71,7 @@ footer {
 }
 
 .projects-section {
-    height: 50vh;
+    /* height: 50vh; */
 }
 
 .projects-message {
@@ -83,12 +88,12 @@ footer {
     animation-iteration-count: infinite;
 }
 
-.view-more-btn:hover{
+.view-more-btn:hover {
     animation-name: button-pop;
     animation-duration: 0.25s;
     animation-direction: normal;
     animation-timing-function: linear;
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
 }
 
 
@@ -146,86 +151,87 @@ footer {
     }
 }
 
+
 @-webkit-keyframes gradient-background-animation {
     0% {
-        background-position: 0% 14%
+        background-position: 0% 50%
     }
 
     50% {
-        background-position: 100% 87%
+        background-position: 100% 50%
     }
 
     100% {
-        background-position: 0% 14%
+        background-position: 0% 50%
     }
 }
 
 @-moz-keyframes gradient-background-animation {
     0% {
-        background-position: 0% 14%
+        background-position: 0% 50%
     }
 
     50% {
-        background-position: 100% 87%
+        background-position: 100% 50%
     }
 
     100% {
-        background-position: 0% 14%
+        background-position: 0% 50%
     }
 }
 
 @keyframes gradient-background-animation {
     0% {
-        background-position: 0% 14%
+        background-position: 0% 50%
     }
 
     50% {
-        background-position: 100% 87%
+        background-position: 100% 50%
     }
 
     100% {
-        background-position: 0% 14%
+        background-position: 0% 50%
     }
-
 }
 
 @keyframes button-pop {
-    0%{
+    0% {
         transform: scale(1);
     }
-    
-    100%{
+
+    100% {
         transform: scale(1.1);
     }
 }
 
-    /* media queries */
+/* media queries */
 /* Extra small devices (portrait phones, less than 576px)
 No media query since this is the default in Bootstrap */
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-}
+@media (min-width: 576px) {}
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    .welcome-section{
-        height:100vh;
-    }
-    .about-section{
-        height:100vh;
-    }
-    .projects-section{
-        height:100vh;
+    html{
+        font-size:1.4rem;
     }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .welcome-section {
+        height: 100vh;
+    }
 
+    .about-section {
+        height: 100vh;
+    }
+
+    .projects-section {
+        /* height: 100vh; */
+    }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
