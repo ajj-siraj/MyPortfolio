@@ -5,7 +5,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    font-size: 2.5rem;
+    font-size: 48px;
 }
 
 body {
@@ -57,7 +57,7 @@ footer {
 
 .welcome-message {
     /* padding: 20%; */
-    font-size: 2em;
+    font-size: 2rem;
     /* background-color: #79797991; */
     padding: 5%;
 }
@@ -80,6 +80,9 @@ footer {
     /* padding: 5%; */
 }
 
+.view-more-btn{
+    font-size:2rem;
+}
 /* Animations */
 .view-more-btn:hover .view-more-icon {
     animation-name: icon-bounce;
@@ -216,13 +219,24 @@ No media query since this is the default in Bootstrap */
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    html{
+    /* html{
         font-size:1.4rem;
+    } */
+    .view-more-btn{
+        margin:2%;
+        font-size:1rem;    
+    }
+    .welcome-section{
+        height:100vh;
     }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .view-more-btn{
+        margin:2%;
+        font-size:0.5rem;    
+    }
     .welcome-section {
         height: 100vh;
     }
