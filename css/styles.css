@@ -43,11 +43,18 @@ footer {
 }
 
 .card img {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .card {
     margin:2%;
+    font-size:0.5rem;
+    color: #000;
+}
+
+.card-footer img{
+    height:40px;
+    padding:5px;
 }
 /* Personal custom styles */
 .welcome-section {
@@ -223,7 +230,7 @@ No media query since this is the default in Bootstrap */
         font-size:1.4rem;
     } */
     .view-more-btn{
-        margin:2%;
+        /* margin:2%; */
         font-size:1rem;    
     }
     .welcome-section{
@@ -235,7 +242,7 @@ No media query since this is the default in Bootstrap */
 @media (min-width: 992px) {
     .view-more-btn{
         margin:2%;
-        font-size:0.5rem;    
+        font-size:0.7rem;    
     }
     .welcome-section {
         height: 100vh;
