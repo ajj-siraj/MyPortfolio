@@ -17,7 +17,7 @@ body {
 
     background: linear-gradient(47deg, #10425a, #6c91a3, #38abe3);
     background-size: 100% 100%;
-
+    overflow-x: hidden;
     /* -webkit-animation: gradient-background-animation 3s ease infinite;
     -moz-animation: gradient-background-animation 3s ease infinite;
     animation: gradient-background-animation 3s ease infinite; */
@@ -47,11 +47,24 @@ footer {
 }
 
 .card {
-    margin:2%;
+    margin:6%;
     font-size:0.5rem;
     color: #000;
 }
 
+.card-header{
+    margin:0%;
+    padding:0%;
+}
+.card-body{
+    padding:0%;
+    margin:0%;
+}
+
+.card-footer{
+    padding:0;
+    margin:0;
+}
 .card-footer img{
     height:40px;
     padding:5px;
@@ -87,6 +100,9 @@ footer {
     /* padding: 5%; */
 }
 
+.project-thumbnail{
+    width:100%;
+}
 .view-more-btn{
     font-size:2rem;
 }
@@ -213,7 +229,7 @@ footer {
     }
 
     100% {
-        transform: scale(1.1);
+        transform: scale(1.3);
     }
 }
 
@@ -254,6 +270,13 @@ No media query since this is the default in Bootstrap */
 
     .projects-section {
         /* height: 100vh; */
+    }
+    .project-thumbnail:hover{
+        /* transform: scale(2); */
+        animation-name:button-pop;
+        animation-direction: normal;
+        animation-duration: 0.1s;
+        animation-fill-mode: forwards;
     }
 }
 
