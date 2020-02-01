@@ -20,24 +20,7 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-        <button id="toggler-btn" class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span id="clpse-icon" class="fa fa-arrow-down fa-arrow-down-animated"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-    </nav> -->
+    
     <!-- Welcome section -->
     <section>
         <div class="container-fluid">
@@ -85,11 +68,11 @@
     <!-- Projects section -->
     <section id="projects">
         <div class="container-fluid">
-            <div class="row projects-section align-items-center">
+            <div class="row projects-section align-items-center justify-content-center">
                 <div class="col-md-12">
-                    <div class="projects-message">These are my projects</div>
+                    <div class="projects-message">My projects</div>
                     <div class="row">
-                        <div class="col-lg-4 col-12">
+                        <!-- <div class="col-lg-4 col-12">
                             <div class="card">
                                 <div class="card-header">
                                     Sample restaurant website
@@ -107,26 +90,26 @@
 
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-lg-4 col-12">
                             <div class="card">
                                 <div class="card-header">
                                     Documentation Page
                                 </div>
                                 <div class="card-body">
-                                    <a href="#">
+                                    
                                         <img id="project-documentation" class="project-thumbnail"
                                             src="img/thumbs/documentation-project-static.gif">
 
-                                    </a>
+                                    
                                 </div>
                                 <div class="card-footer">
                                     <img class="img-fluid" src="img/logos/HTML5_Logo.svg">
                                     <img class="img-fluid" src="img/logos/css3_logo.svg">
-
                                     <img class="img-fluid" src="img/logos/bootstrap4_logo.svg">
-
-
+                                    <hr>
+                                    <a href="#"><img class="img-fluid" src="img/logos/globe.svg"></a>
+                                    <a href="#"><img class="img-fluid" src="img/logos/github_logo.svg"></a>
                                 </div>
                             </div>
                         </div>
@@ -142,9 +125,10 @@
                                 <div class="card-footer">
                                     <img class="img-fluid" src="img/logos/HTML5_Logo.svg">
                                     <img class="img-fluid" src="img/logos/css3_logo.svg">
-
                                     <img class="img-fluid" src="img/logos/bootstrap4_logo.svg">
-
+                                    <hr>
+                                    <a href="#"><img class="img-fluid" src="img/logos/globe.svg"></a>
+                                    <a href="#"><img class="img-fluid" src="img/logos/github_logo.svg"></a>
 
                                 </div>
                             </div>
@@ -155,7 +139,8 @@
                                     Guitar Store
                                 </div>
                                 <div class="card-body">
-                                    <img id="project-guitarstore" class="project-thumbnail" src="img/thumbs/guitarstore-project-static.gif">
+                                    <img id="project-guitarstore" class="project-thumbnail"
+                                        src="img/thumbs/guitarstore-project-static.gif">
                                 </div>
                                 <div class="card-footer">
                                     <img class="img-fluid" src="img/logos/HTML5_Logo.svg">
@@ -163,7 +148,9 @@
                                     <img class="img-fluid" src="img/logos/javascript_logo.svg">
                                     <img class="img-fluid" src="img/logos/bootstrap4_logo.svg">
                                     <img class="img-fluid" src="img/logos/jquery_logo.svg">
-
+                                    <hr>
+                                    <a href="#"><img class="img-fluid" src="img/logos/globe.svg"></a>
+                                    <a href="#"><img class="img-fluid" src="img/logos/github_logo.svg"></a>
                                 </div>
                             </div>
                         </div>
@@ -177,10 +164,33 @@
     <!-- Footer/contact section -->
     <footer id="footer">
         <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-12">
-                    <div class="footer-content">Footer</div>
+            <div class="row align-items-center justify-content-center text-left">
+                <div class="col-12 col-lg-6">
+                    <div class="contact-message">Send me something...</div>
+                    <form method="post" action="">
+                        <label for="contact-name">Name</label>
+                        <input class="form-control" type="text" name="contact-name" id="contact-name"
+                            placeholder="Enter your name">
+                        <label for="contact-email">Email</label>
+                        <input class="form-control" type="text" name="contact-email" id="contact-email"
+                            placeholder="Your email">
+
+                        <label for="contact-message">Message</label>
+                        <textarea class="form-control" type="text" name="contact-message" id="contact-message"
+                            placeholder="What would you like to say?"></textarea>
+                        <button class="btn btn-block btn-primary">Send</button>
+                    </form>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p>Or contact me through:</p>
+                </div>
+            </div>
+            <div class="row contact-logos">
+                <div class="col-4"><img class="img-fluid" src="img/logos/github_logo.svg"></div>
+                <div class="col-4"><img class="img-fluid" src="img/logos/linkedin_logo.svg"></div>
+                <div class="col-4"><img class="img-fluid" src="img/logos/gmail_logo.svg"></div>
             </div>
         </div>
     </footer>

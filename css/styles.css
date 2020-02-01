@@ -5,13 +5,14 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: 'Bangers';
     font-size: 48px;
 }
 
 body {
     /* background-color:#272822b0; */
-    font-family: 'Bangers';
-
+    font-family: 'Marcellus SC';
+    font-size: 1.3rem;
     color: #fff;
     text-align: center;
 
@@ -24,10 +25,21 @@ body {
 
 }
 
+hr {
+    margin: 0;
+    padding: 0;
+}
+
 footer {
     /* padding: 10%; */
     background-color: #e5e5e5;
     color: #7f7f7f;
+}
+
+form {
+    margin: 5%;
+    font-family: "Calibri";
+    /* font-size:30px; */
 }
 
 /* Bootstrap related styles */
@@ -38,7 +50,7 @@ footer {
 }
 
 .btn {
-    border-radius: 50px;
+    border-radius: 0px;
     font-family: 'Marcellus SC';
 }
 
@@ -47,28 +59,32 @@ footer {
 }
 
 .card {
-    margin:6%;
-    font-size:0.5rem;
+    margin: 6%;
+    font-size: 0.5rem;
     color: #000;
 }
 
-.card-header{
-    margin:0%;
-    padding:0%;
-}
-.card-body{
-    padding:0%;
-    margin:0%;
+.card-header {
+    margin: 0%;
+    padding: 0%;
+    font-size: 1rem;
 }
 
-.card-footer{
-    padding:0;
-    margin:0;
+.card-body {
+    padding: 0%;
+    margin: 0%;
 }
-.card-footer img{
-    height:40px;
-    padding:5px;
+
+.card-footer {
+    padding: 0;
+    margin: 0;
 }
+
+.card-footer img {
+    height: 90px;
+    padding: 10px;
+}
+
 /* Personal custom styles */
 .welcome-section {
     /* padding:20%; */
@@ -80,6 +96,7 @@ footer {
     font-size: 2rem;
     /* background-color: #79797991; */
     padding: 5%;
+    font-family:"Bangers";
 }
 
 .about-section {
@@ -93,19 +110,38 @@ footer {
 }
 
 .projects-section {
-    /* height: 50vh; */
+    min-height: 100vh;
 }
 
 .projects-message {
-    /* padding: 5%; */
+    padding: 5%;
 }
 
-.project-thumbnail{
-    width:100%;
+.project-thumbnail {
+    width: 100%;
 }
-.view-more-btn{
-    font-size:2rem;
+
+.contact-message {
+    text-align: center;
+    padding: 7%;
 }
+
+form input,
+textarea {
+    margin-bottom: 30px;
+}
+.contact-logos{
+    padding:5%;
+}
+.contact-logos img {
+    height: 90px;
+    margin-bottom:5%;
+}
+
+.view-more-btn {
+    font-size: 2rem;
+}
+
 /* Animations */
 .view-more-btn:hover .view-more-icon {
     animation-name: icon-bounce;
@@ -116,14 +152,7 @@ footer {
     animation-iteration-count: infinite;
 }
 
-.view-more-btn:hover {
-    animation-name: button-pop;
-    animation-duration: 0.25s;
-    animation-direction: normal;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    /* background-color: #a086ff; */
-}
+
 
 
 
@@ -242,24 +271,40 @@ No media query since this is the default in Bootstrap */
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+
     /* html{
         font-size:1.4rem;
     } */
-    .view-more-btn{
+    .view-more-btn {
         /* margin:2%; */
-        font-size:1rem;    
+        font-size: 1rem;
     }
-    .welcome-section{
-        height:100vh;
+
+    .welcome-section {
+        height: 100vh;
     }
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .view-more-btn{
-        margin:2%;
-        font-size:0.7rem;    
+    html{
+        font-size:24px;
     }
+
+
+    .view-more-btn {
+        margin: 2%;
+    }
+
+    /* .view-more-btn:hover {
+        animation-name: button-pop;
+        animation-duration: 0.25s;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        //background-color: #a086ff;
+    } */
+
     .welcome-section {
         height: 100vh;
     }
@@ -271,13 +316,24 @@ No media query since this is the default in Bootstrap */
     .projects-section {
         /* height: 100vh; */
     }
-    .project-thumbnail:hover{
+
+    .project-thumbnail:hover {
         /* transform: scale(2); */
-        animation-name:button-pop;
+        animation-name: button-pop;
         animation-direction: normal;
         animation-duration: 0.1s;
         animation-fill-mode: forwards;
     }
+
+
+    .card-footer img {
+        height: 50px;
+    }
+
+    .contact-logos img {
+        height: 70px;
+    }
+
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
