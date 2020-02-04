@@ -42,6 +42,10 @@ form {
     /* font-size:30px; */
 }
 
+a:hover{
+    text-decoration: none;
+}
+
 /* Bootstrap related styles */
 .btn:focus,
 .btn:active {
@@ -80,7 +84,7 @@ form {
     margin: 0;
 }
 
-.card-footer img {
+.card-footer img, .card-header img {
     height: 90px;
     padding: 10px;
 }
@@ -326,7 +330,7 @@ No media query since this is the default in Bootstrap */
     }
 
 
-    .card-footer img {
+    .card-footer img, .card-header img {
         height: 50px;
     }
 
