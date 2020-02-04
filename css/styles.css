@@ -46,6 +46,10 @@ a:hover{
     text-decoration: none;
 }
 
+h4{
+    margin-top:15%;
+}
+
 /* Bootstrap related styles */
 .btn:focus,
 .btn:active {
@@ -58,9 +62,6 @@ a:hover{
     font-family: 'Marcellus SC';
 }
 
-.card img {
-    /* width: 100%; */
-}
 
 .card {
     margin: 6%;
@@ -104,15 +105,47 @@ a:hover{
 }
 
 .about-section {
-    height: 50vh;
-    background-color: #e5e5e5;
-    color: #7f7f7f;
+    height: 100%;
+    background-color: #fafafa;
+    color: #4d4d4d;
+    font-family: 'Dosis';
 }
 
+.about-section img{
+    height:100px;
+    width:150px;
+    margin:5%;
+}
+
+/* .html5-logo{
+    position:relative;
+    top:2rem;
+}
+
+.css-logo{
+    position:relative;
+    top:0;
+    left:5.5rem;
+}
+
+.js-logo{
+    position:relative;
+    top:0.7rem;
+    left:10rem;
+}
+
+.jq-logo{
+    position:relative;
+    top:7rem;
+    left:-5rem;
+} */
 .about-message {
-    /* margin-top: 20%; */
+    padding:10%;
 }
 
+.about-skills{
+    padding:10%;
+}
 .projects-section {
     min-height: 100vh;
 }
@@ -317,9 +350,9 @@ No media query since this is the default in Bootstrap */
         height: 100vh;
     }
 
-    .projects-section {
-        /* height: 100vh; */
-    }
+    /* .projects-section {
+        height: 100vh;
+    } */
 
     .project-thumbnail:hover {
         /* transform: scale(2); */
