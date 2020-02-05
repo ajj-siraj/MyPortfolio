@@ -329,7 +329,9 @@ No media query since this is the default in Bootstrap */
     }
 
     h4{
-        margin:auto;
+        margin-top:50px;
+        background-color:#17cfc6;
+        border-radius:30px;
     }
     .view-more-btn {
         margin: 2%;
