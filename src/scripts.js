@@ -19,7 +19,7 @@ $(document).ready(function () {
              $('.about-message').fadeIn(1000);
              
         }
-        if ($(this).scrollTop() > 5000) {
+        if ($(this).scrollTop() > 1500) {
             $('.projects-message').fadeIn(1000);
             $('.project-card').fadeIn(1000);
        }
