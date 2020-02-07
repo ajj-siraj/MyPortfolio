@@ -27,33 +27,30 @@ $(document).ready(function () {
 
     });
 
-    setTimeout(function () {
-        $("#project-documentation").hover(
-            function () {
-                $(this).attr("src", image1.src);
-            },
-            function () {
-                $(this).attr("src", "./img/thumbs/documentation-project-static.gif");
-            }
-        );
-        $("#project-survey").hover(
-            function () {
-                $(this).attr("src", image2.src);
-            },
-            function () {
-                $(this).attr("src", "./img/thumbs/survey-project-static.gif");
-            }
-        );
-        $("#project-guitarstore").hover(
-            function () {
-                $(this).attr("src", image3.src);
-            },
-            function () {
-                $(this).attr("src", "./img/thumbs/guitarstore-project-static.gif");
-            }
-        );
-    }, 10);
-
+     $("#project-documentation").hover(
+        function () {
+            $(this).attr("src", image1.src);
+        },
+        function () {
+            $(this).attr("src", "./img/thumbs/documentation-project-static.gif");
+        }
+    );
+    $("#project-survey").hover(
+        function () {
+            $(this).attr("src", image2.src);
+        },
+        function () {
+            $(this).attr("src", "./img/thumbs/survey-project-static.gif");
+        }
+    );
+    $("#project-guitarstore").hover(
+        function () {
+            $(this).attr("src", image3.src);
+        },
+        function () {
+            $(this).attr("src", "./img/thumbs/guitarstore-project-static.gif");
+        }
+    );
 
 });
 
