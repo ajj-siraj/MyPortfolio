@@ -1,10 +1,10 @@
 $(document).ready(function () {
     let image1 = new Image();
-    image1.src = "/img/thumbs/documentation-project.gif";
+    image1.src = "./img/thumbs/documentation-project.gif";
     let image2 = new Image();
-    image2.src = "/img/thumbs/survey-project.gif";
+    image2.src = "./img/thumbs/survey-project.gif";
     let image3 = new Image();
-    image3.src = "/img/thumbs/guitarstore-project.gif";
+    image3.src = "./img/thumbs/guitarstore-project.gif";
 
     $('.welcome-message').hide();
     $('.view-more-btn').hide();
