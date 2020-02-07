@@ -33,7 +33,7 @@ $(document).ready(function () {
                 $(this).attr("src", image1.src);
             },
             function () {
-                $(this).attr("src", "../img/thumbs/documentation-project-static.gif");
+                $(this).attr("src", "./img/thumbs/documentation-project-static.gif");
             }
         );
         $("#project-survey").hover(
@@ -41,7 +41,7 @@ $(document).ready(function () {
                 $(this).attr("src", image2.src);
             },
             function () {
-                $(this).attr("src", "../img/thumbs/survey-project-static.gif");
+                $(this).attr("src", "./img/thumbs/survey-project-static.gif");
             }
         );
         $("#project-guitarstore").hover(
@@ -49,7 +49,7 @@ $(document).ready(function () {
                 $(this).attr("src", image3.src);
             },
             function () {
-                $(this).attr("src", "../img/thumbs/guitarstore-project-static.gif");
+                $(this).attr("src", "./img/thumbs/guitarstore-project-static.gif");
             }
         );
     }, 10);
