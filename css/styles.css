@@ -68,13 +68,15 @@ h4{
     font-family: 'Marcellus SC';
 }
 
-
+.btn-outline-dark:hover{
+    background-color:#4e5761;
+}
 .card {
     margin: 6%;
     font-size: 0.5rem;
     color: #000;
     border:none;
-    background-color: #bee4f7;
+    background-color: #c0c2c4;
 }
 
 .card-header {
@@ -171,6 +173,10 @@ h4{
 
 .project-thumbnail {
     width: 100%;
+}
+
+.project-btn{
+    border:none;
 }
 
 .contact-message {
@@ -377,7 +383,7 @@ No media query since this is the default in Bootstrap */
         padding-left:7px;
     } */
 
-    .card:hover {
+    .card-body img:hover {
         /* transform: scale(2); */
         animation-name: button-pop;
         animation-direction: normal;
