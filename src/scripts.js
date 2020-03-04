@@ -1,35 +1,15 @@
-let image1 = new Image();
-image1.src = "./img/thumbs/documentation-project.gif";
-let image2 = new Image();
-image2.src = "./img/thumbs/survey-project.gif";
-let image3 = new Image();
-image3.src = "./img/thumbs/guitarstore-project.gif";
-
 $(document).ready(function () {
+    
+    //Initialize gifs to pre-load even before hover.
+    let image1 = new Image();
+    image1.src = "./img/thumbs/documentation-project.gif";
+    let image2 = new Image();
+    image2.src = "./img/thumbs/survey-project.gif";
+    let image3 = new Image();
+    image3.src = "./img/thumbs/guitarstore-project.gif";
 
 
-    // $('.welcome-message').hide();
-    // $('.view-more-btn').hide();
-    // $('.about-message').hide();
-    // $('.projects-message').hide();
-    // $('.project-card').hide();
-    // // $('footer').hide();
-    // $('.welcome-message').fadeIn(1000);
-    // $('.view-more-btn').fadeIn(2000);
-    // $(window).scroll(function () {
-    //     if ($(this).scrollTop() > 250) {
-    //         $('.about-message').fadeIn(1000);
-
-    //     }
-    //     if ($(this).scrollTop() > 1500) {
-    //         $('.projects-message').fadeIn(1000);
-    //         $('.project-card').fadeIn(1000);
-    //     }
-
-
-    // });
-
-     $("#project-documentation").hover(
+    $("#project-documentation").hover(
         function () {
             $(this).attr("src", image1.src);
         },

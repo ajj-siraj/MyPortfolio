@@ -327,7 +327,9 @@
             <div class="row align-items-center justify-content-center text-left">
                 <div class="col-12 col-lg-6">
                     <div class="contact-message">Send me something...</div>
-                    <form method="post" action="https://formspree.io/mwkovzwq">
+                    
+                    <form method="post">  <!-- action="https://formspree.io/mwkovzwq" -->
+                        
                         <label for="contact-name">Name</label>
                         <input class="form-control" type="text" name="contact-name" id="contact-name"
                             placeholder="Enter your name" required>
@@ -348,11 +350,14 @@
                 </div>
             </div>
             <div class="row contact-logos">
-                <div class="col-4"><a href="https://github.com/ajj-siraj"><img class="img-fluid"
-                            src="img/logos/github_logo.svg"></a href=""></div>
-                <div class="col-4"><a href="http://www.linkedin.com/in/sirageldin-ahmed"><img class="img-fluid"
+                <div class="col-4"><a href="https://github.com/ajj-siraj" target="_blank"
+                    rel="noopener noreferrer"><img class="img-fluid"
+                            src="img/logos/github_logo.svg"></a></div>
+                <div class="col-4"><a href="http://www.linkedin.com/in/sirageldin-ahmed" target="_blank"
+                    rel="noopener noreferrer"><img class="img-fluid"
                             src="img/logos/linkedin_logo.svg"></a></div>
-                <div class="col-4"><a href="mailto:ajj.siraj@gmail.com"><img class="img-fluid"
+                <div class="col-4"><a href="mailto:ajj.siraj@gmail.com" target="_blank"
+                    rel="noopener noreferrer"><img class="img-fluid"
                             src="img/logos/gmail_logo.svg"></a></div>
             </div>
         </div>
@@ -362,6 +367,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="src/scripts.js"></script>
+    <script src="src/form.js"></script>
 </body>
 
 </html>

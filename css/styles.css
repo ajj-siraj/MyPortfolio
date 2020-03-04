@@ -188,6 +188,11 @@ form input,
 textarea {
     margin-bottom: 30px;
 }
+
+.errormsg{
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 100;
+}
 .contact-logos{
     padding:5%;
 }
