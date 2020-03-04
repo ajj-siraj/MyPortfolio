@@ -3,7 +3,9 @@ const formInfo = {
     contactName: document.querySelector('#contact-name'),
     contactEmail: document.querySelector('#contact-email'),
     contactMsg: document.querySelector('#contact-message'),
-}
+};
+
+
 const errorLocation = formSendBtn.parentNode.parentNode;
 
 const emailRegex = /[^@]+@[^@]+\.[a-zA-Z]{2,}/;
@@ -71,5 +73,3 @@ function formVerify() {
 
     return "msgInvalid";
 }
-
-export {formInfo};
