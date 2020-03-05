@@ -43,29 +43,46 @@
     <title>Form verification</title>
 </head>
 
-<body>
+<body id="formpage">
 
-    <form>
-        <!-- action="https://formspree.io/mwkovzwq" -->
-        <label for="contact-name">Name</label>
-        <input class="form-control" type="text" name="contact-name" id="contact-name" placeholder="Enter your name"
-            required>
-        <label for="contact-email">Email</label>
-        <input class="form-control" type="email" name="contact-email" id="contact-email" placeholder="Your email"
-            required>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-lg-8">
+                <div class="verifymsg">Is this the message you want to send?</div>
+            </div>
+        </div>
+        <div class="row justify-content-center align-items-center text-left">
+            <div class="col-12 col-lg-8">
+                <form method="post" action="https://formspree.io/mwkovzwq">
+                    <label for="contact-name">Name</label>
+                    <input class="form-control" type="text" name="contact-name" id="contact-name"
+                        placeholder="Enter your name" required>
+                    <label for="contact-email">Email</label>
+                    <input class="form-control" type="email" name="contact-email" id="contact-email"
+                        placeholder="Your email" required>
 
-        <label for="contact-message">Message</label>
-        <textarea class="form-control" type="text" name="contact-message" id="contact-message"
-            placeholder="What would you like to say?" required></textarea>
-        <button class="btn btn-block btn-primary" type="button">Send</button>
-    </form>
+                    <label for="contact-message">Message</label>
+                    <textarea class="form-control" type="text" name="contact-message" id="contact-message"
+                        placeholder="What would you like to say?" required></textarea>
+                    <button class="btn btn-block btn-primary">Confirm</button>
+                </form>
+
+            </div>
+
+            <div class="row justify-content-center align-items-center">
+                <div class="col-12 col-lg-8">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="src/scripts.js"></script>
-    <script src="src/formPage.js" type="module"></script>
-</body>
+    <script src="src/formPage.js"></script>
+</body id="formpage-container">
 
 </html>

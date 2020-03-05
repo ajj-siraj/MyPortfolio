@@ -4,3 +4,6 @@ const formInfo = {
     contactMsg: document.querySelector('#contact-message'),
 };
 
+for(let field in formInfo){
+    formInfo[field].value = localStorage.getItem(field);
+}

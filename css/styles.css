@@ -193,6 +193,15 @@ textarea {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 100;
 }
+
+.verifymsg{
+    color: #000;
+    margin-top:10%;
+}
+
+#formpage{
+    color:#000;
+}
 .contact-logos{
     padding:5%;
 }
