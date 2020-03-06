@@ -46,13 +46,17 @@ function formRedirect(e) {
             const errorDiv = document.createElement('div');
             errorDiv.appendChild(document.createTextNode("You left some empty fields."));
             errorDiv.classList.add("errormsg", "text-center", "alert", "alert-danger");
+            errorDiv.id = "error-div";
             errorLocation.insertBefore(errorDiv, formSendBtn.parentNode);
+            window.location.href = "#error-div";
         }
         if (verificationResult === "emailInvalid") {
             const errorDiv = document.createElement('div');
             errorDiv.appendChild(document.createTextNode("Please enter a valid email."));
             errorDiv.classList.add("errormsg", "text-center", "alert", "alert-danger");
+            errorDiv.id = "error-div";
             errorLocation.insertBefore(errorDiv, formSendBtn.parentNode);
+            window.location.href = "#error-div";
         }
 
 
