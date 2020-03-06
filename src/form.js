@@ -28,13 +28,25 @@ function formRedirect(e) {
         if (document.querySelector(".errormsg") !== null) {
             formSendBtn.parentNode.parentNode.removeChild(document.querySelector(".errormsg"));
         }
-
+        
         //redirection and localstorage logic
-        for(let field in formInfo){
-            // console.log(formInfo[field].value);
-            localStorage.setItem(field, formInfo[field].value);
+        let contactData = {
+            contactName: [],
+            contactEmail: [],
+            contactMsg: []
+        }
+
+        for(let contactField in contactData){
+            for(let formField in formInfo){
+                if(contactData[contactField].length === 0){
+                    contactData[contactField].push(formInfo[contactField].value);
+                    localStorage.setItem(contactField, JSON.stringify(contactData[contactField]));
+                }
+            }
+            
         }
         window.location.href = "./form.html";
+        // setTimeout(() => window.location.href = "./form.html", 3000);
         
     } else {
         //show error msg
