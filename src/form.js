@@ -26,7 +26,7 @@ function formRedirect(e) {
 
     if (verificationResult === "allGood") {
         if (document.querySelector(".errormsg") !== null) {
-            formSendBtn.parentNode.parentNode.removeChild(document.querySelector(".errormsg"));
+            errorLocation.removeChild(document.querySelector(".errormsg"));
         }
         
         //redirection and localstorage logic
@@ -51,7 +51,7 @@ function formRedirect(e) {
     } else {
         //show error msg
         if (document.querySelector(".errormsg") !== null) {
-            formSendBtn.parentNode.parentNode.removeChild(document.querySelector(".errormsg"));
+            errorLocation.removeChild(document.querySelector(".errormsg"));
         }
 
         if (verificationResult === "nameInvalid" || verificationResult === "msgInvalid") {
