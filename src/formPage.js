@@ -8,6 +8,7 @@ const prevEntriesRow = document.querySelector("#render-previous");
 
 confirmBtn.addEventListener('click', addToLocalStorage);
 
+
 //Check if entries exist in localStorage, if so -> display
 for (let field in formInfo) {
     if (localStorage.getItem(field) !== null) {

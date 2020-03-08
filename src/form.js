@@ -28,27 +28,27 @@ function formRedirect(e) {
         if (document.querySelector(".errormsg") !== null) {
             errorLocation.removeChild(document.querySelector(".errormsg"));
         }
-        
-        //redirection and localstorage logic
-        let contactData = {
-            contactName: [],
-            contactEmail: [],
-            contactMsg: []
-        }
 
-        for(let contactField in contactData){
-            for(let formField in formInfo){
-                if(contactData[contactField].length === 0){
-                    contactData[contactField].push(formInfo[contactField].value);
-                    localStorage.setItem(contactField, JSON.stringify(contactData[contactField]));
-                }
+        //redirection and localstorage logic
+
+        for (let field in formInfo) {
+            let tempArray = JSON.parse(localStorage.getItem(field));
+            if(tempArray !== null){
+                tempArray.push(formInfo[field].value);
+                localStorage.setItem(field, JSON.stringify(tempArray));
             }
-            
+            else{
+                tempArray = [];
+                tempArray.push(formInfo[field].value);
+                localStorage.setItem(field, JSON.stringify(tempArray));
+            }
         }
         window.location.href = "./form.html";
-        // setTimeout(() => window.location.href = "./form.html", 3000);
-        
-    } else {
+        // setTimeout(() => window.location.href = "./form.html", 5000);
+
+    }
+
+    else {
         //show error msg
         if (document.querySelector(".errormsg") !== null) {
             errorLocation.removeChild(document.querySelector(".errormsg"));
