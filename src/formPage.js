@@ -13,11 +13,11 @@ renderPreviousEntries();
 
 for (let field in formInfo) {
     if (localStorage.getItem(field) !== null) {
-        
+
         let tempArray = JSON.parse(localStorage.getItem(field));
         formInfo[field].value = tempArray[tempArray.length - 1];
     }
-} 
+}
 
 //Add confirmed fields to localStorage and update if changed
 function addToLocalStorage(e) {
@@ -29,11 +29,9 @@ function addToLocalStorage(e) {
             let fieldArray = [];
             fieldArray.push(formInfo[field].value);
             localStorage.setItem(field, JSON.stringify(fieldArray));
-        } 
-        
-        else if (localStorage.getItem(field) !== null) {
+        } else if (localStorage.getItem(field) !== null) {
             let fieldArray = JSON.parse(localStorage.getItem(field));
-            
+
             fieldArray.push(formInfo[field].value);
             localStorage.setItem(field, JSON.stringify(fieldArray));
         }
@@ -41,21 +39,29 @@ function addToLocalStorage(e) {
     // console.log(localStorage);
 }
 
-function renderPreviousEntries(){
-    // const colDiv = document.createElement('div');
-    // const colSpan = document.createElement('span');
-    // colDiv.appendChild(colSpan);
-    // colDiv.classList.add('col-12', 'col-lg-6');
-    for(field in formInfo){
-        let fieldArray = JSON.parse(localStorage.getItem(field));
-        console.log(fieldArray);
-        for(item in fieldArray){
-            console.log(fieldArray[item]);
-            
-            const content = "<div class=\"col-12 col-lg-8\"><div>" + fieldArray[item] + "</div></div>";
-            prevEntriesRow.insertAdjacentHTML('beforeend', content);
-        }
-        
+function renderPreviousEntries() {
+
+    // for (field in formInfo) {
+    //     let fieldArray = JSON.parse(localStorage.getItem(field));
+    //     const tableRow = document.createElement('tr');
+    //     const tableData = document.createElement('td');
+
+    //     const textNode = document.createTextNode(`${fieldArray}`);
+    //     console.log(textNode);
+    //     tableData.appendChild(textNode);
+    //     tableRow.appendChild(tableData);
+    //     // const content = `
+    //     //         <tr>
+    //     //             <td>${}</td>
+    //     //             <td>test1@one.one</td>
+    //     //             <td>test 1</td>
+    //     //         </tr>
+    //     //         `;
+
+    //     // prevEntriesRow.insertAdjacentHTML('beforeend', content);
+    //     prevEntriesRow.appendChild(tableRow);
+    //     console.log(fieldArray);
+
     }
 
 }
