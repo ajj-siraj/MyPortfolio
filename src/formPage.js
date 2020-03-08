@@ -4,18 +4,25 @@ const formInfo = {
     contactEmail: document.querySelector('#contact-email'),
     contactMsg: document.querySelector('#contact-message')
 };
+const prevEntriesRow = document.querySelector("#render-previous");
 
 confirmBtn.addEventListener('click', addToLocalStorage);
 
+//Check if entries exist in localStorage, if so -> display
 for (let field in formInfo) {
     if (localStorage.getItem(field) !== null) {
-        let fieldArray = JSON.parse(localStorage.getItem(field));
-        formInfo[field].value = fieldArray[fieldArray.length - 1];
+        // renderPreviousEntries();
+        let tempArray = JSON.parse(localStorage.getItem(field));
+        formInfo[field].value = tempArray[tempArray.length - 1];
     }
 }
 
-function addToLocalStorage() {
+//Add confirmed fields to localStorage and update if changed
+function addToLocalStorage(e) {
+
+    e.preventDefault();
     for (let field in formInfo) {
+        // console.log(localStorage.getItem(field));
         if (localStorage.getItem(field) === null) {
             let fieldArray = [];
             fieldArray.push(formInfo[field].value);
@@ -23,31 +30,19 @@ function addToLocalStorage() {
             console.log(localStorage);
         } else if (localStorage.getItem(field) !== null) {
             let fieldArray = JSON.parse(localStorage.getItem(field));
+            console.log(fieldArray);
+            //pop last entry if identical to current -- still leaves an array size mismatch between the 3 fields in case not all fields are updated
+            if (formInfo[field].value === fieldArray[fieldArray.length - 1]) {
+                fieldArray.pop(fieldArray);
 
-            if (formInfo[field].value !== fieldArray[fieldArray.length - 1]) {
-                fieldArray.push(formInfo[field].value);
-                localStorage.setItem(field, JSON.stringify(fieldArray));
             }
+            fieldArray.push(formInfo[field].value);
+            localStorage.setItem(field, JSON.stringify(fieldArray));
         }
     }
+    console.log(localStorage);
 }
 
-
-// if (localStorage.getItem("contactName") === null) {
-//     console.log("contactNames is null");
-//     let contactNames = [];
-//     contactNames.push(formInfo.contactName.value);
-//     console.log(contactNames);
-//     localStorage.setItem("contactName", JSON.stringify(contactNames));
-//     console.log(localStorage);
-// } else if (localStorage.getItem("contactName") !== null) {
-//     // let contactNames = JSON.parse(localStorage.getItem("contactName"));
-//     formInfo.contactName.value = JSON.parse(localStorage.getItem("contactName"));
-//     console.log(localStorage);
-// }
-
-
-
-// for(let i = 0; i < contactNames.length; i++){
+// function renderPreviousEntries(){
 
 // }
