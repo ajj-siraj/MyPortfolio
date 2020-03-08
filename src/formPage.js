@@ -8,42 +8,54 @@ const prevEntriesRow = document.querySelector("#render-previous");
 
 confirmBtn.addEventListener('click', addToLocalStorage);
 
+//Check if entries exist in localStorage, if so -> render & display
+renderPreviousEntries();
 
-//Check if entries exist in localStorage, if so -> display
 for (let field in formInfo) {
     if (localStorage.getItem(field) !== null) {
-        // renderPreviousEntries();
+        
         let tempArray = JSON.parse(localStorage.getItem(field));
         formInfo[field].value = tempArray[tempArray.length - 1];
     }
-}
+} 
 
 //Add confirmed fields to localStorage and update if changed
 function addToLocalStorage(e) {
 
     e.preventDefault();
     for (let field in formInfo) {
-        // console.log(localStorage.getItem(field));
+
         if (localStorage.getItem(field) === null) {
             let fieldArray = [];
             fieldArray.push(formInfo[field].value);
             localStorage.setItem(field, JSON.stringify(fieldArray));
-            console.log(localStorage);
-        } else if (localStorage.getItem(field) !== null) {
+        } 
+        
+        else if (localStorage.getItem(field) !== null) {
             let fieldArray = JSON.parse(localStorage.getItem(field));
-            console.log(fieldArray);
-            //pop last entry if identical to current -- still leaves an array size mismatch between the 3 fields in case not all fields are updated
-            if (formInfo[field].value === fieldArray[fieldArray.length - 1]) {
-                fieldArray.pop(fieldArray);
-
-            }
+            
             fieldArray.push(formInfo[field].value);
             localStorage.setItem(field, JSON.stringify(fieldArray));
         }
     }
-    console.log(localStorage);
+    // console.log(localStorage);
 }
 
-// function renderPreviousEntries(){
+function renderPreviousEntries(){
+    // const colDiv = document.createElement('div');
+    // const colSpan = document.createElement('span');
+    // colDiv.appendChild(colSpan);
+    // colDiv.classList.add('col-12', 'col-lg-6');
+    for(field in formInfo){
+        let fieldArray = JSON.parse(localStorage.getItem(field));
+        console.log(fieldArray);
+        for(item in fieldArray){
+            console.log(fieldArray[item]);
+            
+            const content = "<div class=\"col-12 col-lg-8\"><div>" + fieldArray[item] + "</div></div>";
+            prevEntriesRow.insertAdjacentHTML('beforeend', content);
+        }
+        
+    }
 
-// }
+}
