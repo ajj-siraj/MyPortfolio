@@ -8,7 +8,7 @@ const formInfo = {
 const prevEntriesRow = document.querySelector("#render-previous");
 
 confirmBtn.addEventListener('click', addToLocalStorage);
-returnBtn.addEventListener('click', (e) => {e.preventDefault(); window.location.href = document.location.hostname});
+returnBtn.addEventListener('click', (e) => {e.preventDefault(); window.location.href = "/"});
 
 //Check if entries exist in localStorage, if so -> render & display
 renderPreviousEntries();
