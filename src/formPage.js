@@ -20,9 +20,9 @@ for (let field in formInfo) {
 }
 
 //Add confirmed fields to localStorage and update if changed
-function addToLocalStorage(e) {
+function addToLocalStorage() {
 
-    e.preventDefault();
+    // e.preventDefault();
     for (let field in formInfo) {
 
         if (localStorage.getItem(field) === null) {
@@ -37,31 +37,38 @@ function addToLocalStorage(e) {
         }
     }
     // console.log(localStorage);
+    //AJAX implementation
+    // localInJSON = JSON.stringify(localStorage);
+    // $("form button").on("click", function() {
+    //     $.ajax({
+    //         url: "https://formspree.io/mwkovzwq", 
+    //         method: "POST",
+    //         data: localInJSON,
+    //         dataType: "json"
+    //     });
+    // });
 }
 
 function renderPreviousEntries() {
 
-    // for (field in formInfo) {
-    //     let fieldArray = JSON.parse(localStorage.getItem(field));
-    //     const tableRow = document.createElement('tr');
-    //     const tableData = document.createElement('td');
+    const contactNames = JSON.parse(localStorage.getItem("contactName"));
+    const contactEmails = JSON.parse(localStorage.getItem("contactEmail"));
+    const contactMsgs = JSON.parse(localStorage.getItem("contactMsg"));
+    const renderArray = contactNames.map((arr) => {
+        return (
+        `<tr>
+            <td>${arr}</td>
+        </tr>`
+        );
+    });
+    console.log(renderArray);
+    $('#render-previous').append(renderArray);
+    for(let i = 1; i<=renderArray.length; i++){
+        $(`#render-previous tr:nth-child(${i})`).append(`<td>${contactEmails[i-1]}</td>`);
+    }
 
-    //     const textNode = document.createTextNode(`${fieldArray}`);
-    //     console.log(textNode);
-    //     tableData.appendChild(textNode);
-    //     tableRow.appendChild(tableData);
-    //     // const content = `
-    //     //         <tr>
-    //     //             <td>${}</td>
-    //     //             <td>test1@one.one</td>
-    //     //             <td>test 1</td>
-    //     //         </tr>
-    //     //         `;
-
-    //     // prevEntriesRow.insertAdjacentHTML('beforeend', content);
-    //     prevEntriesRow.appendChild(tableRow);
-    //     console.log(fieldArray);
-
+    for(let i = 1; i<=renderArray.length; i++){
+        $(`#render-previous tr:nth-child(${i})`).append(`<td>${contactMsgs[i-1]}</td>`);
     }
 
 }
