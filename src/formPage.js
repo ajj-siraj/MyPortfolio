@@ -1,4 +1,5 @@
-const confirmBtn = document.querySelector("form button");
+const confirmBtn = document.querySelector("#confirmbtn");
+const returnBtn = document.querySelector("#returnbtn");
 const formInfo = {
     contactName: document.querySelector('#contact-name'),
     contactEmail: document.querySelector('#contact-email'),
@@ -7,6 +8,7 @@ const formInfo = {
 const prevEntriesRow = document.querySelector("#render-previous");
 
 confirmBtn.addEventListener('click', addToLocalStorage);
+returnBtn.addEventListener('click', (e) => {e.preventDefault(); window.location.href = document.location.hostname});
 
 //Check if entries exist in localStorage, if so -> render & display
 renderPreviousEntries();
@@ -39,7 +41,7 @@ function addToLocalStorage() {
     // console.log(localStorage);
     //AJAX implementation
     // localInJSON = JSON.stringify(localStorage);
-    // $("form button").on("click", function() {
+    // $("#confirmbtn").on("click", function() {
     //     $.ajax({
     //         url: "https://formspree.io/mwkovzwq", 
     //         method: "POST",
