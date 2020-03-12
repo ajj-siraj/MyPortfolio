@@ -8,7 +8,10 @@ const formInfo = {
 const prevEntriesRow = document.querySelector("#render-previous");
 
 confirmBtn.addEventListener('click', addToLocalStorage);
-returnBtn.addEventListener('click', (e) => {e.preventDefault(); window.location.href = "/"});
+returnBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = "/"
+});
 
 //Check if entries exist in localStorage, if so -> render & display
 renderPreviousEntries();
@@ -38,17 +41,6 @@ function addToLocalStorage() {
             localStorage.setItem(field, JSON.stringify(fieldArray));
         }
     }
-    // console.log(localStorage);
-    //AJAX implementation
-    // localInJSON = JSON.stringify(localStorage);
-    // $("#confirmbtn").on("click", function() {
-    //     $.ajax({
-    //         url: "https://formspree.io/mwkovzwq", 
-    //         method: "POST",
-    //         data: localInJSON,
-    //         dataType: "json"
-    //     });
-    // });
 }
 
 function renderPreviousEntries() {
@@ -56,21 +48,78 @@ function renderPreviousEntries() {
     const contactNames = JSON.parse(localStorage.getItem("contactName"));
     const contactEmails = JSON.parse(localStorage.getItem("contactEmail"));
     const contactMsgs = JSON.parse(localStorage.getItem("contactMsg"));
+
+    //the render the names column
     const renderArray = contactNames.map((arr) => {
         return (
-        `<tr>
+            `<tr>
             <td>${arr}</td>
         </tr>`
         );
     });
-    console.log(renderArray);
     $('#render-previous').append(renderArray);
-    for(let i = 1; i<=renderArray.length; i++){
+
+    //render the emails column
+    for (let i = 1; i <= renderArray.length; i++) {
         $(`#render-previous tr:nth-child(${i})`).append(`<td>${contactEmails[i-1]}</td>`);
     }
 
-    for(let i = 1; i<=renderArray.length; i++){
+    //render the messages column
+    for (let i = 1; i <= renderArray.length; i++) {
         $(`#render-previous tr:nth-child(${i})`).append(`<td>${contactMsgs[i-1]}</td>`);
     }
 
+}
+
+
+//AJAX implementation to formspree
+
+window.addEventListener("DOMContentLoaded", function () {
+
+    // get the form elements defined in your form HTML above
+
+    var form = document.getElementById("myform");
+    var button = confirmBtn;
+    // var status = document.getElementById("my-form-status");
+
+    // Success and Error functions for after the form is submitted
+
+    function success() {
+        $('#status-message').append("<p>Thank you for your email. You will be redirected back to the homepage shortly.</p>");
+        $('#status-modal').modal({backdrop: 'static', keyboard: false});
+        $('#status-modal').modal('show');
+        form.reset();
+        setTimeout(() => window.location.href = "/", 2000);
+    }
+
+    function error() {
+        //   status.innerHTML = "Oops! There was a problem.";
+        document.querySelector('#status-message').innerHTML = "Error. Please try again.";
+        $('#status-modal').modal('show');
+    }
+
+    // handle the form submission event
+
+    form.addEventListener("submit", function (ev) {
+        ev.preventDefault();
+        var data = new FormData(form);
+        ajax(form.method, form.action, data, success, error);
+    });
+});
+
+// helper function for sending an AJAX request
+
+function ajax(method, url, data, success, error) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+    xhr.setRequestHeader("Accept", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState !== XMLHttpRequest.DONE) return;
+        if (xhr.status === 200) {
+            success(xhr.response, xhr.responseType);
+        } else {
+            error(xhr.status, xhr.response, xhr.responseType);
+        }
+    };
+    xhr.send(data);
 }

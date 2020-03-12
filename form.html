@@ -43,6 +43,17 @@
     <title>Form verification</title>
 </head>
 
+<div id="status-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p id="status-message">Success!</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
 <body id="formpage">
 
     <div class="container">
@@ -53,7 +64,7 @@
         </div>
         <div class="row justify-content-center align-items-center text-left">
             <div class="col-12 col-lg-8">
-                <form method="post" action="https://formspree.io/mwkovzwq">
+                <form method="post" action="https://formspree.io/mwkovzwq" id="myform">
                     <label for="contact-name">Name</label>
                     <input class="form-control" type="text" name="contact-name" id="contact-name"
                         placeholder="Enter your name" required>
@@ -92,11 +103,12 @@
     </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
     <script src="src/scripts.js"></script>
     <script src="src/formPage.js"></script>
-</body id="formpage-container">
+</body>
 
 </html>
