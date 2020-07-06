@@ -53,8 +53,8 @@ function renderPreviousEntries() {
     const renderArray = contactNames.map((arr) => {
         return (
             `<tr>
-            <td>${arr}</td>
-        </tr>`
+                <td>${arr}</td>
+            </tr>`
         );
     });
     $('#render-previous').append(renderArray);
@@ -76,24 +76,21 @@ function renderPreviousEntries() {
 
 window.addEventListener("DOMContentLoaded", function () {
 
-    // get the form elements defined in your form HTML above
-
     var form = document.getElementById("myform");
-    var button = confirmBtn;
-    // var status = document.getElementById("my-form-status");
 
     // Success and Error functions for after the form is submitted
-
     function success() {
         $('#status-message').append("<p>Thank you for your email. You will be redirected back to the homepage shortly.</p>");
-        $('#status-modal').modal({backdrop: 'static', keyboard: false});
+        $('#status-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
         $('#status-modal').modal('show');
         form.reset();
         setTimeout(() => window.location.href = "/", 2000);
     }
 
     function error() {
-        //   status.innerHTML = "Oops! There was a problem.";
         document.querySelector('#status-message').innerHTML = "Error. Please try again.";
         $('#status-modal').modal('show');
     }

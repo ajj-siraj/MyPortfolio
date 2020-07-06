@@ -7,6 +7,8 @@ $(document).ready(function () {
     image2.src = "./img/thumbs/survey-project.gif";
     let image3 = new Image();
     image3.src = "./img/thumbs/guitarstore-project.gif";
+    let image4 = new Image();
+    image4.src = "./img/thumbs/cornflix.gif";
 
 
     $("#project-documentation").hover(
@@ -31,6 +33,14 @@ $(document).ready(function () {
         },
         function () {
             $(this).attr("src", "./img/thumbs/guitarstore-project-static.gif");
+        }
+    );
+    $("#project-cornflix").hover(
+        function () {
+            $(this).attr("src", image4.src);
+        },
+        function () {
+            $(this).attr("src", "./img/thumbs/cornflix-static.jpg");
         }
     );
 
