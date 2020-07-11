@@ -71,18 +71,22 @@ h4{
 .btn-outline-dark:hover{
     background-color:#4e5761;
 }
+
+/*Todo: restyle the cards and the whole webpage theme + add tooltips for techs*/
 .card {
     margin: 6%;
+    padding: 6%;
     font-size: 0.5rem;
-    color: #000;
+    color: #3f3f3f;
     border:none;
-    background-color: #c0c2c4;
+    background-color: #ffffff;
 }
 
 .card-header {
     margin: 0%;
     padding: 0%;
     font-size: 1rem;
+    background-color: #ffffff;
     
 }
 
