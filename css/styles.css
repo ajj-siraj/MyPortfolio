@@ -143,12 +143,12 @@ h4 {
 }
 .about-section {
   height: 100%;
-  background: rgb(159,159,159);
-background: -moz-linear-gradient(0deg, rgba(159,159,159,1) 0%, #222222 44%);
-background: -webkit-linear-gradient(0deg, rgba(159,159,159,1) 0%, #222222 44%);
-background: linear-gradient(0deg, rgba(159,159,159,1) 0%, #222222 44%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9f9f9f",endColorstr="#000000",GradientType=1);
-  color: #e9e9e9;
+  background: rgb(159,188,198);
+background: -moz-linear-gradient(0deg, rgba(159,188,198,1) 0%, rgba(0,0,0,1) 100%);
+background: -webkit-linear-gradient(0deg, rgba(159,188,198,1) 0%, rgba(0,0,0,1) 100%);
+background: linear-gradient(0deg, rgba(159,188,198,1) 0%, rgba(0,0,0,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9fbcc6",endColorstr="#000000",GradientType=1);
+color: #e9e9e9;
   font-family: "Dosis";
 }
 
