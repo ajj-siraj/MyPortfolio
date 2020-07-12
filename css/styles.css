@@ -51,7 +51,7 @@ a:hover {
 
 h4 {
   margin-top: 50px;
-  background-color: #6c91a3;
+  /* background-color: #6c91a3; */
   border-radius: 30px;
   color: #eeeeee;
   padding: 10px;
@@ -83,8 +83,8 @@ h4 {
   background-color: #ffffff;
 }
 
-.card .btn{
-    border-radius: 20px;
+.card .btn {
+  border-radius: 20px;
 }
 .card-header {
   margin: 0%;
@@ -115,24 +115,18 @@ h4 {
 }
 
 /* Personal custom styles */
-.about-section::after{
-    background-color: rgb(201, 198, 198);
-    width: 100%;
-    height: 150px;
-    /* transform: rotate(5deg); */
-    transform: skewY(-5deg);
-}
+
 .welcome-section {
   /* padding:20%; */
   height: 50vh;
 
-  background: rgb(255,255,255);
-  background: -moz-linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(223,162,38,1) 47%);
-  background: -webkit-linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(223,162,38,1) 47%);
-  background: linear-gradient(150deg, rgba(255,255,255,1) 0%, rgba(223,162,38,1) 47%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#dfa226",GradientType=1);
-
-background-size: 100% 100%;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 22%);
+  background: -webkit-linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 22%);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 22%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#000000",GradientType=1);
+  
+  background-size: 100% 100%;
 }
 
 .welcome-message {
@@ -143,16 +137,18 @@ background-size: 100% 100%;
   font-family: "Bangers";
 }
 
+.bg-primary{
+  background-color: #7082B0
+  !important;
+}
 .about-section {
   height: 100%;
-  background: #000;
-  /* background: rgb(255,255,255);
-background: -moz-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(12,116,149,1) 100%);
-background: -webkit-linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(12,116,149,1) 100%);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(12,116,149,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#0c7495",GradientType=1); */
-
-color: #e9e9e9;
+  background: rgb(159,159,159);
+background: -moz-linear-gradient(0deg, rgba(159,159,159,1) 0%, #222222 44%);
+background: -webkit-linear-gradient(0deg, rgba(159,159,159,1) 0%, #222222 44%);
+background: linear-gradient(0deg, rgba(159,159,159,1) 0%, #222222 44%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9f9f9f",endColorstr="#000000",GradientType=1);
+  color: #e9e9e9;
   font-family: "Dosis";
 }
 
@@ -167,17 +163,17 @@ color: #e9e9e9;
   padding: 10%;
 }
 
+.skills-heading{
+  /* background-color: #f1af33; */
+}
+
 .about-skills {
   padding: 0 10% 10% 10%;
 }
 .projects-section {
   min-height: 100vh;
-  background: rgb(69, 72, 81);
-  background: -moz-linear-gradient(180deg, rgba(69, 72, 81, 1) 0%, rgba(12, 116, 149, 1) 100%);
-  background: -webkit-linear-gradient(180deg, rgba(69, 72, 81, 1) 0%, rgba(12, 116, 149, 1) 100%);
-  background: linear-gradient(180deg, rgba(69, 72, 81, 1) 0%, rgba(12, 116, 149, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#454851",endColorstr="#0c7495",GradientType=1);
-}
+  background: #9FBCC6;
+  }
 
 .projects-message {
   padding: 5%;

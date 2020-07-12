@@ -10,7 +10,19 @@ $(document).ready(function () {
     let image4 = new Image();
     image4.src = "./img/thumbs/cornflix.gif";
 
-
+    //I was here, thinking of scratching the whole fullpage idea and just add side nav buttons
+    //Initialize fullpage plugin
+    // $('#fullpage').fullpage({
+	// 	//options here
+	// 	autoScrolling:true,
+	// 	scrollHorizontally: true
+	// });
+    
+    //initialize bootstrap tooltips
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    
     $("#project-documentation").hover(
         function () {
             $(this).attr("src", image1.src);
