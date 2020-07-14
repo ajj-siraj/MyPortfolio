@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    
+
     //Initialize gifs to pre-load even before hover.
     let image1 = new Image();
     image1.src = "./img/thumbs/documentation-project.gif";
@@ -9,20 +9,13 @@ $(document).ready(function () {
     image3.src = "./img/thumbs/guitarstore-project.gif";
     let image4 = new Image();
     image4.src = "./img/thumbs/cornflix.gif";
-
-    //I was here, thinking of scratching the whole fullpage idea and just add side nav buttons
-    //Initialize fullpage plugin
-    // $('#fullpage').fullpage({
-	// 	//options here
-	// 	autoScrolling:true,
-	// 	scrollHorizontally: true
-	// });
     
     //initialize bootstrap tooltips
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
       })
     
+    //projects hover -> switch to gif.
     $("#project-documentation").hover(
         function () {
             $(this).attr("src", image1.src);
@@ -57,39 +50,3 @@ $(document).ready(function () {
     );
 
 });
-
-
-
-
-
-
-
-
-
-
-
-// //Mobile menu collapse button animation toggle
-// $('#toggler-btn').on('click', function () {
-//     $('#clpse-icon').toggleClass("fa-arrow-up-animated");
-// });
-
-// // Bootstrap carousel: Projects
-// $('.multi-item-carousel').carousel({
-//     interval: false
-// });
-
-// // for every slide in carousel, copy the next slide's item in the slide.
-// // Do the same for the next, next item.
-// $('.multi-item-carousel .item').each(function () {
-//     var next = $(this).next();
-//     if (!next.length) {
-//         next = $(this).siblings(':first');
-//     }
-//     next.children(':first-child').clone().appendTo($(this));
-
-//     if (next.next().length > 0) {
-//         next.next().children(':first-child').clone().appendTo($(this));
-//     } else {
-//         $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-//     }
-// });
