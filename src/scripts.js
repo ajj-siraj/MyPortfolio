@@ -63,21 +63,20 @@ function initializeAnimations(){
       x: 50,
       alpha: 0,
       ease: "expo.out",
-      scrollTrigger: { trigger: ".skills-heading", start: "top 50%", markers: true },
+      scrollTrigger: { trigger: ".skills-heading", start: "top 50%" },
       stagger: 0.1
     },
-    
-    
   )
-  
+
+  //project cards flip
   gsap.from(
     ".project-card",
-    1,
+    0.5,
     {
       rotationY: 180,
       alpha: 0,
       ease: "linear.easein",
-      scrollTrigger: {trigger: ".projects-message", start: "top 30%", markers: true},
+      scrollTrigger: {trigger: ".projects-message", start: "top 30%"},
       stagger: 0.1
     }
   )
